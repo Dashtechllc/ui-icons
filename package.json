@@ -1,6 +1,6 @@
 {
   "name": "@dashtechllc/ui-icons",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React icon components",
   "main": "dist/index.js",
   "types": "dist/index.d.js",
