@@ -8,6 +8,9 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
+  "release": {
+    "repositoryUrl": "https://github.com/Dashtechllc/ui-icons.git"
+  },
   "files": [
     "dist/*"
   ],
