@@ -1,0 +1,71 @@
+{
+  "name": "@dashtechllc/ui-icons",
+  "version": "1.0.0",
+  "description": "React icon components",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "module": "dist/index.es.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "keywords": [
+    "dashtechnologyllc",
+    "ui-icons"
+  ],
+  "scripts": {
+    "generate": "svgr --out-dir src/generated src/svgs && npm run prettier:fix",
+    "build": "npm run generate && rollup -c",
+    "prettier": "prettier --check \"./**/*.{json,js,ts,tsx}\"",
+    "prettier:fix": "prettier --write \"./**/*.{json,js,ts,tsx}\"",
+    "dev": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "author": "Dash technology llc",
+  "license": "MIT",
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "styled-components": "6.0.8",
+    "rollup": "3.28.0",
+    "rollup-plugin-peer-deps-external": "2.2.4",
+    "rollup-plugin-postcss": "4.0.2",
+    "@rollup/plugin-babel": "6.0.3",
+    "@rollup/plugin-commonjs": "25.0.4",
+    "@rollup/plugin-node-resolve": "15.1.0",
+    "@rollup/plugin-typescript": "11.1.2"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.7.1",
+    "@commitlint/config-conventional": "17.7.0",
+    "@storybook/addon-essentials": "^7.4.2",
+    "@storybook/addon-interactions": "^7.4.2",
+    "@storybook/addon-links": "^7.4.2",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.4.2",
+    "@storybook/react": "^7.4.2",
+    "@storybook/react-vite": "^7.4.2",
+    "@storybook/testing-library": "^0.2.1",
+    "@svgr/cli": "8.1.0",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "@typescript-eslint/eslint-plugin": "6.3.0",
+    "@typescript-eslint/parser": "6.3.0",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.47.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-import-resolver-typescript": "3.6.0",
+    "eslint-plugin-import": "2.28.0",
+    "eslint-plugin-storybook": "0.6.13",
+    "prettier": "3.0.3",
+    "storybook": "^7.4.2",
+    "typescript": "5.2.2"
+  }
+}

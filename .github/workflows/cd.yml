@@ -1,0 +1,9 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  semantic-release:
+    uses: dashtechllc/workflows/.github/workflows/semantic-release.yml@main
