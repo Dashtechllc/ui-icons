@@ -6,9 +6,6 @@ on:
       - main
 jobs:
   release:
-    permissions:
-      contents: read
-      packages: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,9 +13,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
-          node-version: 20.6
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@dashtechllc'
+          node-version: 20.5
       - run: npm ci
       - run: npm run build
       - name: Semantic Release
@@ -37,6 +32,20 @@ jobs:
             '@semantic-release/git'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@dashtechllc'
       - name: Publish
         run: npm ci
       - run: npm publish
