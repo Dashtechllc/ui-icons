@@ -5,7 +5,6 @@
   "main": "dist/index.js",
   "types": "dist/index.d.js",
   "module": "dist/index.es.js",
-  "private": true,
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
