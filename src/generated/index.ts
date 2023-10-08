@@ -1,4 +1,9 @@
 export { default as BurgerMenu } from './BurgerMenu';
 export { default as Checked } from './Checked';
+export { default as Cross } from './Cross';
+export { default as Diamond } from './Diamond';
 export { default as Home } from './Home';
 export { default as ShoppingCart } from './ShoppingCart';
+export { default as TimeFast } from './TimeFast';
+export { default as Usd } from './Usd';
+export { default as Vector } from './Vector';
